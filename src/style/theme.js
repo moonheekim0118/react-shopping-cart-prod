@@ -9,13 +9,13 @@ const deviceSize = {
 
 const theme = {
   COLOR: {
-    WHITE: '#ffffff',
+    WHITE: '#FFFFFF',
     BLACK: '#000000',
-    RED_300: '#fca5a5',
+    RED_300: '#FCA5A5',
     GREY_100: '#BBBBBB',
-    GREY_200: '#e4e4e7',
+    GREY_200: '#E4E4E7',
     GREY_300: '#DDDDDD',
-    GREY_500: '#78716c',
+    GREY_500: '#78716C',
   },
   DEVICE: {
     EXTRA_SMALL: `screen and (max-width:${deviceSize.mobile})`,
