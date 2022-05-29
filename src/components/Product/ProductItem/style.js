@@ -61,9 +61,13 @@ export const Price = styled.span`
 `;
 
 export const Button = styled.button`
-  background-color: transparent;
+  background-color: ${({ checked, theme }) =>
+    checked ? `${theme.COLOR.CYAN_TRANSPARENT}` : 'transparent'};
   border: none;
   cursor: pointer;
+  width: 50px;
+  padding: 9px;
+  border-radius: 50%;
 `;
 
 export const CartSvg = styled.img`

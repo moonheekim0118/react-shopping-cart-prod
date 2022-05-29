@@ -16,6 +16,7 @@ const theme = {
     GREY_200: '#E4E4E7',
     GREY_300: '#DDDDDD',
     GREY_500: '#78716C',
+    CYAN_TRANSPARENT: 'rgba(204, 255, 255, 0.5)',
   },
   DEVICE: {
     EXTRA_SMALL: `screen and (max-width:${deviceSize.mobile})`,

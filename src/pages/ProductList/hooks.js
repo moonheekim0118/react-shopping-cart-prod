@@ -14,12 +14,19 @@ const useProductListPage = () => {
     url: '/products',
   });
 
-  const { addItem } = useCart();
+  const { cartItems, deleteItem, addItem } = useCart();
 
   const isEmpty = products && !isLoading && products.length === 0;
 
+  const includedInCart = (id) =>
+    cartItems && cartItems?.findIndex((item) => item.id === id) !== -1;
+
   const handleClickCartButton = (id) => (e) => {
     e.stopPropagation();
+    if (includedInCart(id)) {
+      deleteItem(id);
+      return;
+    }
     addItem(id);
   };
 
@@ -27,7 +34,14 @@ const useProductListPage = () => {
     fetchApi();
   }, []);
 
-  return { isLoading, isError, products, isEmpty, handleClickCartButton };
+  return {
+    isLoading,
+    isError,
+    products,
+    isEmpty,
+    includedInCart,
+    handleClickCartButton,
+  };
 };
 
 export default useProductListPage;
