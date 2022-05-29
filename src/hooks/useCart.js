@@ -1,14 +1,12 @@
-import useReduxState from 'hooks/useReduxState';
+import { useSelector, useDispatch } from 'react-redux';
 import { getCartItemAsync } from 'reducers/cart/cart.thunk';
 import { setCart } from 'reducers/cart/cart.actions';
 import { METHOD } from 'constants';
 import useFetch from 'hooks/useFetch';
 
 const useCart = () => {
-  const {
-    dispatch,
-    state: { isLoading, isError, data },
-  } = useReduxState('cart');
+  const dispatch = useDispatch();
+  const { isLoading, isError, data } = useSelector((state) => state.cart);
 
   const { fetchApi: deleteItemApi } = useFetch({
     method: METHOD.DELETE,
