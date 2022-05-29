@@ -6,6 +6,7 @@ import Skeleton from 'components/Common/Skeleton/Skeleton';
 import ImgWrapper from 'components/Common/ImgWrapper/ImgWrapper';
 import useProductListPage from 'hooks/pages/useProductListPage';
 import itemAltImg from 'assets/png/itemAltImg.png';
+import { INITIAL_SKELETON_NUMBER } from 'constants';
 
 const ProductList = () => {
   const { isLoading, isError, products, isEmpty, handleClickCartButton } =
@@ -16,7 +17,7 @@ const ProductList = () => {
   if (isLoading)
     return (
       <ProductContainer>
-        {Array.from({ length: 8 }).map((_, index) => (
+        {Array.from({ length: INITIAL_SKELETON_NUMBER }).map((_, index) => (
           <Skeleton key={index} sizeType="small" />
         ))}
       </ProductContainer>

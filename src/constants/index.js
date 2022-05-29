@@ -14,3 +14,5 @@ export const METHOD = {
   DELETE: 'delete',
   PUT: 'put',
 };
+
+export const INITIAL_SKELETON_NUMBER = 8;
