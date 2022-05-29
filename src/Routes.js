@@ -1,26 +1,30 @@
-import { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ProductList, Product, Cart, NotFound } from 'pages';
 import { PATH_NAME } from 'constants';
 import Layout from 'components/Common/Layout/Layout';
-import ImgWrapper from 'components/Common/ImgWrapper/ImgWrapper';
-import spinner from 'assets/svg/spinner.svg';
 
-const PageRoutes = () => {
-  return (
-    <Suspense fallback={<ImgWrapper src={spinner} size={100} />}>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path={PATH_NAME.HOME} element={<ProductList />} />
-            <Route path={`${PATH_NAME.PRODUCT}/:id`} element={<Product />} />
-            <Route path={PATH_NAME.CART} element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </Suspense>
-  );
-};
+const routes = [
+  {
+    path: PATH_NAME.HOME,
+    element: <Layout />,
+    children: [
+      {
+        path: '',
+        element: <ProductList />,
+      },
+      {
+        path: `${PATH_NAME.PRODUCT}/:id`,
+        element: <Product />,
+      },
+      {
+        path: PATH_NAME.CART,
+        element: <Cart />,
+      },
+    ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  },
+];
 
-export default PageRoutes;
+export default routes;
