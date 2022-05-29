@@ -33,3 +33,18 @@ export const MenuContainer = styled.section`
   display: flex;
   gap: 15px;
 `;
+
+export const Badge = styled.div`
+  position: absolute;
+  top: 5px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  color: ${({ theme }) => theme.COLOR.WHITE};
+  background-color: ${({ theme }) => theme.COLOR.GREY_500};
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+`;

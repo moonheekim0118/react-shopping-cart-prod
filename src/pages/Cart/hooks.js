@@ -40,7 +40,7 @@ const useCartPage = () => {
   };
 
   useEffect(() => {
-    setSelectedItemList(cartItems.map(({ id }) => id));
+    setSelectedItemList(cartItems ? cartItems.map(({ id }) => id) : []);
   }, [cartItems]);
 
   useEffect(() => {
