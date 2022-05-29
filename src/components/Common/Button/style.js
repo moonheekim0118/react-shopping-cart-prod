@@ -32,6 +32,6 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   font-family: ${({ theme }) => theme.FONT.SECONDARY};
-  ${({ sizeType }) => buttonSize[sizeType]}
+  ${({ size }) => buttonSize[size]}
   ${({ colorType }) => buttonColor[colorType]}
 `;

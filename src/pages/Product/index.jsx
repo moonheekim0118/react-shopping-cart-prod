@@ -12,7 +12,7 @@ const Product = () => {
   if (isLoading)
     return (
       <Styled.Wrapper>
-        <Skeleton sizeType="large" />
+        <Skeleton size="large" />
       </Styled.Wrapper>
     );
 

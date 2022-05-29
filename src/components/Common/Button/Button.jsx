@@ -2,14 +2,9 @@ import PropTypes from 'prop-types';
 import { buttonColor, buttonSize } from './style';
 import * as Styled from './style';
 
-const Button = ({ colorType, sizeType, children, ...rest }) => {
+const Button = ({ colorType, size, children, ...rest }) => {
   return (
-    <Styled.Button
-      type="button"
-      colorType={colorType}
-      sizeType={sizeType}
-      {...rest}
-    >
+    <Styled.Button type="button" colorType={colorType} size={size} {...rest}>
       {children}
     </Styled.Button>
   );
@@ -17,7 +12,7 @@ const Button = ({ colorType, sizeType, children, ...rest }) => {
 
 Button.propTypes = {
   colorType: PropTypes.oneOf(Object.keys(buttonColor)),
-  sizeType: PropTypes.oneOf(Object.keys(buttonSize)),
+  size: PropTypes.oneOf(Object.keys(buttonSize)),
   children: PropTypes.string,
 };
 

@@ -28,8 +28,8 @@ const skeletonStyle = css`
 `;
 
 export const Wrapper = styled.div`
-  ${({ sizeType = 'small' }) => `
-    ${skeletonSize[sizeType]}
+  ${({ size = 'small' }) => `
+    ${skeletonSize[size]}
   `}
   margin-bottom: 30px;
 `;

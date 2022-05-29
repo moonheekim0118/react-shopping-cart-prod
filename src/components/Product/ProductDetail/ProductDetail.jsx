@@ -14,11 +14,7 @@ const ProductDetail = ({ imgUrl, name, price, onClickCartButton }) => {
           <p>금액</p>
           <p>{parsePrice(price)}원</p>
         </Styled.Price>
-        <Button
-          colorType="secondary"
-          sizeType="large"
-          onClick={onClickCartButton}
-        >
+        <Button colorType="secondary" size="large" onClick={onClickCartButton}>
           장바구니
         </Button>
       </Styled.InfoBox>

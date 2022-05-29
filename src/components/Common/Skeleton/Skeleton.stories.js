@@ -5,7 +5,7 @@ export default {
   title: 'components/Skeleton',
   component: Skeleton,
   argTypes: {
-    sizeType: {
+    size: {
       options: Object.keys(skeletonSize),
       control: { type: 'radio' },
     },
@@ -16,10 +16,10 @@ const Template = (args) => <Skeleton {...args} />;
 
 export const Large = Template.bind({});
 Large.args = {
-  sizeType: 'large',
+  size: 'large',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  sizeType: 'small',
+  size: 'small',
 };

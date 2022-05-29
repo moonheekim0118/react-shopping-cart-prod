@@ -5,7 +5,7 @@ export default {
   title: 'components/Button',
   component: Button,
   argTypes: {
-    sizeType: {
+    size: {
       options: Object.keys(buttonSize),
       control: { type: 'radio' },
     },
@@ -21,7 +21,7 @@ const Template = (args) => <Button {...args} />;
 export const Example = Template.bind({});
 
 Example.args = {
-  sizeType: 'large',
+  size: 'large',
   colorType: 'primary',
   children: '장바구니',
 };

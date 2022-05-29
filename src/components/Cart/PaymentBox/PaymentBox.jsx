@@ -13,7 +13,7 @@ const PaymentBox = ({ price, quantity }) => {
         <Styled.Text>총 결제 금액</Styled.Text>
         <Styled.Text>{parsePrice(price)}원</Styled.Text>
       </Styled.BottomBox>
-      <Button colorType="primary" sizeType="medium">
+      <Button colorType="primary" size="medium">
         결제하기 ({quantity}개)
       </Button>
     </Styled.Wrapper>

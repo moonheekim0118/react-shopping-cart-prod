@@ -18,7 +18,7 @@ const ProductList = () => {
     return (
       <ProductContainer>
         {Array.from({ length: INITIAL_SKELETON_NUMBER }).map((_, index) => (
-          <Skeleton key={index} sizeType="small" />
+          <Skeleton key={index} size="small" />
         ))}
       </ProductContainer>
     );

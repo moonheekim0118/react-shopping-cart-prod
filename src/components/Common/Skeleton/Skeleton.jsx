@@ -2,9 +2,9 @@ import { skeletonSize } from './style';
 import * as Styled from './style';
 import PropTypes from 'prop-types';
 
-const Skeleton = ({ sizeType }) => {
+const Skeleton = ({ size }) => {
   return (
-    <Styled.Wrapper sizeType={sizeType}>
+    <Styled.Wrapper size={size}>
       <Styled.LargeBox />
       <Styled.Container>
         <Styled.MediumBox />
@@ -15,7 +15,7 @@ const Skeleton = ({ sizeType }) => {
 };
 
 Skeleton.propTypes = {
-  sizeType: PropTypes.oneOf(Object.keys(skeletonSize)),
+  size: PropTypes.oneOf(Object.keys(skeletonSize)),
 };
 
 export default Skeleton;
