@@ -14,7 +14,7 @@ const Header = () => {
     <Styled.Wrapper>
       <Styled.Logo to="/">
         <Styled.LogoImage src={bigCart} alt="로고" />
-        <Styled.LogoText>댕냥상회</Styled.LogoText>
+        <Styled.LogoText>우아한 상회</Styled.LogoText>
       </Styled.Logo>
       <Styled.MenuContainer>
         <MenuItem onClick={handleClickCartMenu}>장바구니</MenuItem>

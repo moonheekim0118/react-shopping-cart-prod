@@ -14,7 +14,7 @@ export const Logo = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: ${({ theme }) => theme.COLOR.WHITE};
   text-decoration-line: none;
 `;
 
@@ -23,9 +23,8 @@ export const LogoImage = styled.img`
   height: 44px;
 `;
 
-export const LogoText = styled.span`
+export const LogoText = styled.h1`
   padding: 15px 20px 10px 20px;
-  font-size: 40px;
   font-weight: 900;
   font-family: ${({ theme }) => theme.FONT.PRIMARY};
 `;
