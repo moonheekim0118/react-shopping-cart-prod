@@ -10,7 +10,7 @@ import spinner from 'assets/svg/spinner.svg';
 import errorApiImg from 'assets/png/errorApiImg.png';
 import useCartPage from 'hooks/pages/useCartPage';
 import itemAltImg from 'assets/png/itemAltImg.png';
-import { isInList } from 'utils';
+import { includes } from 'utils';
 
 const Cart = () => {
   const {
@@ -65,7 +65,7 @@ const Cart = () => {
                   imgUrl={imgUrl || itemAltImg}
                   price={price}
                   quantity={quantity}
-                  isSelected={isInList(selectedItemList, id)}
+                  isSelected={includes(selectedItemList, id)}
                   onToggleSelect={handleToggleSelect(id)}
                 />
               ))}
