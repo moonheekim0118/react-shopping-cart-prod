@@ -35,7 +35,7 @@ const useCart = () => {
   };
 
   const deleteItems = (idList) => {
-    Promise.all(idList.forEach((id) => deleteItemApi(id)));
+    Promise.all(idList.map((id) => deleteItemApi(id)));
   };
 
   const updateItemQuantity = (id, quantity) => {
