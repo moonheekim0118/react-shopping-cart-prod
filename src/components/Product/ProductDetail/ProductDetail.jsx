@@ -6,7 +6,7 @@ import { parsePrice } from 'utils';
 const ProductDetail = ({ imgUrl, name, price, onClickCartButton }) => {
   return (
     <>
-      <Styled.Image src={imgUrl} alt="상품 이미지" />
+      <Styled.Image src={imgUrl} alt={name} />
       <Styled.InfoBox>
         <Styled.Name>{name}</Styled.Name>
         <Styled.Line />
