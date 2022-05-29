@@ -32,7 +32,7 @@ const CartItem = ({
     }
   };
 
-  const handleDeleteItem = (id) => () => {
+  const handleDeleteItem = () => {
     deleteItem(id);
   };
 
@@ -50,7 +50,7 @@ const CartItem = ({
         <Styled.Name>{name}</Styled.Name>
       </Styled.LeftBox>
       <Styled.RightBox>
-        <Styled.DeleteButton onClick={handleDeleteItem(id)}>
+        <Styled.DeleteButton onClick={handleDeleteItem}>
           <Styled.TrashBinSvg src={smallTrashBin} alt="상품 삭제 버튼" />
         </Styled.DeleteButton>
         <Styled.QuantityControlBox>
