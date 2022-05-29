@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { apiClient } from 'utils';
 import { METHOD } from 'constants/index';
+import apiClient from 'api';
 import PropTypes from 'prop-types';
 
 const useFetch = ({ method, url, handler }) => {
