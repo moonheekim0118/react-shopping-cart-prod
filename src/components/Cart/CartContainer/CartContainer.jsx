@@ -6,7 +6,7 @@ const CartContainer = ({ children }) => {
   return (
     <>
       <Styled.Title>
-        댕냥 배송상품 ({React.Children.count(children)})
+        든든 배송상품 ({React.Children.count(children)})
       </Styled.Title>
       <Styled.Container>{children}</Styled.Container>
     </>

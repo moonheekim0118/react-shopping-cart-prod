@@ -8,12 +8,6 @@ const useFetch = ({ method, url, handler }) => {
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    if (data && handler) {
-      handler(data);
-    }
-  }, [data]);
-
   const fetchApi = async (params = '') => {
     setIsLoading(true);
     setIsError(false);
@@ -26,6 +20,13 @@ const useFetch = ({ method, url, handler }) => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (data && handler) {
+      handler(data);
+    }
+  }, [data]);
+
   return { isLoading, isError, data, fetchApi };
 };
 

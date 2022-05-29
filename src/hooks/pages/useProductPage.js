@@ -17,13 +17,13 @@ const useProductPage = () => {
   });
   const { addItem } = useCart();
 
-  useEffect(() => {
-    fetchApi();
-  }, []);
-
   const handleClickCartButton = () => {
     addItem(product.id);
   };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
 
   return { isLoading, isError, product, handleClickCartButton };
 };

@@ -16,14 +16,8 @@ const CartItem = ({
   isSelected,
   onToggleSelect,
 }) => {
-  const [itemQuantity, setItemQuantity] = useState(quantity);
   const { updateItemQuantity, deleteItem } = useCart();
-
-  useEffect(() => {
-    if (quantity !== itemQuantity) {
-      updateItemQuantity(id, itemQuantity);
-    }
-  }, [itemQuantity]);
+  const [itemQuantity, setItemQuantity] = useState(quantity);
 
   const handleIncrementQuantity = () => {
     setItemQuantity((prevQuantity) => prevQuantity + 1);
@@ -41,6 +35,12 @@ const CartItem = ({
   const handleDeleteItem = (id) => () => {
     deleteItem(id);
   };
+
+  useEffect(() => {
+    if (quantity !== itemQuantity) {
+      updateItemQuantity(id, itemQuantity);
+    }
+  }, [itemQuantity]);
 
   return (
     <Styled.Wrapper>

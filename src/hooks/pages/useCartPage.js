@@ -7,12 +7,6 @@ const useCartPage = () => {
 
   const [selectedItemList, setSelectedItemList] = useState([]);
 
-  useEffect(() => {
-    if (!cartItems) {
-      getItems();
-    }
-  }, []);
-
   const totalPrice = useMemo(() => {
     if (!cartItems || cartItems.length === 0) return 0;
     const selectedItems = cartItems.filter(({ id }) =>
@@ -44,6 +38,12 @@ const useCartPage = () => {
     deleteItems(selectedItemList);
     setSelectedItemList([]);
   };
+
+  useEffect(() => {
+    if (!cartItems) {
+      getItems();
+    }
+  }, []);
 
   return {
     isLoading,

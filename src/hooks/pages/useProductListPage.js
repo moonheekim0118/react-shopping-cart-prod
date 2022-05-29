@@ -15,16 +15,17 @@ const useProductListPage = () => {
   });
 
   const { addItem } = useCart();
-  const isEmpty = products && !isLoading && products.length === 0;
 
-  useEffect(() => {
-    fetchApi();
-  }, []);
+  const isEmpty = products && !isLoading && products.length === 0;
 
   const handleClickCartButton = (id) => (e) => {
     e.stopPropagation();
     addItem(id);
   };
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
 
   return { isLoading, isError, products, isEmpty, handleClickCartButton };
 };
