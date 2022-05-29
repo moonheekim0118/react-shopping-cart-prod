@@ -28,7 +28,7 @@ const skeletonStyle = css`
 `;
 
 export const Wrapper = styled.div`
-  ${({ sizeType }) => `
+  ${({ sizeType = 'small' }) => `
     ${skeletonSize[sizeType]}
   `}
   margin-bottom: 30px;
