@@ -1,4 +1,5 @@
 import * as Styled from './style';
+import useCartPage from './hooks';
 import CartContainer from 'components/Cart/CartContainer/CartContainer';
 import CartItem from 'components/Cart/CartItem/CartItem';
 import CartControlBar from 'components/Cart/CartControlBar/CartControlBar';
@@ -8,7 +9,6 @@ import PaymentBox from 'components/Cart/PaymentBox/PaymentBox';
 import ImgWrapper from 'components/Common/ImgWrapper/ImgWrapper';
 import spinner from 'assets/svg/spinner.svg';
 import errorApiImg from 'assets/png/errorApiImg.png';
-import useCartPage from 'hooks/pages/useCartPage';
 import itemAltImg from 'assets/png/itemAltImg.png';
 import { includes } from 'utils';
 

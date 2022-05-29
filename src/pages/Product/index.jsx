@@ -1,9 +1,9 @@
 import * as Styled from './style';
+import useProductPage from './hooks';
 import ProductDetail from 'components/Product/ProductDetail/ProductDetail';
 import Skeleton from 'components/Common/Skeleton/Skeleton';
 import errorApiImg from 'assets/png/errorApiImg.png';
 import ImgWrapper from 'components/Common/ImgWrapper/ImgWrapper';
-import useProductPage from 'hooks/pages/useProductPage';
 import itemAltImg from 'assets/png/itemAltImg.png';
 
 const Product = () => {
