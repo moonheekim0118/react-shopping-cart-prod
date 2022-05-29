@@ -18,7 +18,7 @@ const useProductPage = () => {
   const { addItem } = useCart();
 
   const handleClickCartButton = () => {
-    addItem(product.id);
+    addItem(id);
   };
 
   useEffect(() => {
