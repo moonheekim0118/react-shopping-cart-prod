@@ -13,7 +13,7 @@ export const Label = styled.label`
   height: 16px;
   width: 16px;
   background-color: ${({ theme }) => theme.COLOR.WHITE};
-  border: 1px solid ${({ theme }) => theme.COLOR.RED_300};
+  border: 1px solid ${({ theme }) => theme.COLOR.CYAN_300};
   cursor: pointer;
 
   &:after {
@@ -32,7 +32,7 @@ export const Label = styled.label`
   ${({ checked }) =>
     checked &&
     css`
-      background-color: ${({ theme }) => theme.COLOR.RED_300};
+      background-color: ${({ theme }) => theme.COLOR.CYAN_300};
       &:after {
         display: block;
       }

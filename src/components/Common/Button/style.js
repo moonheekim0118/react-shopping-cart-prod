@@ -20,7 +20,7 @@ export const buttonSize = {
 
 export const buttonColor = {
   primary: css`
-    background-color: ${(props) => props.theme.COLOR.RED_300};
+    background-color: ${(props) => props.theme.COLOR.CYAN_300};
   `,
   secondary: css`
     background-color: ${(props) => props.theme.COLOR.GREY_500};

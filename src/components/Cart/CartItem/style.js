@@ -45,7 +45,7 @@ export const QuantityControlBox = styled.div`
 export const QuantityButton = styled.button`
   background-color: transparent;
   border: none;
-  color: ${({ theme }) => theme.COLOR.RED_300};
+  color: ${({ theme }) => theme.COLOR.CYAN_300};
   cursor: pointer;
   font-size: 20px;
 `;

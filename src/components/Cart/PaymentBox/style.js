@@ -31,5 +31,5 @@ export const BottomBox = styled.div`
 
 export const Text = styled.p`
   line-height: 1.5px;
-  border-bottom: 5px solid ${({ theme }) => theme.COLOR.RED_300};
+  border-bottom: 5px solid ${({ theme }) => theme.COLOR.CYAN_300};
 `;

@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
   display: flex;
   width: 100vw;
   height: 80px;
-  background: ${({ theme }) => theme.COLOR.RED_300};
+  background: ${({ theme }) => theme.COLOR.CYAN_300};
   box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
   justify-content: space-around;
 `;
