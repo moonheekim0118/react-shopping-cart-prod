@@ -21,7 +21,7 @@ const Header = () => {
       <Styled.MenuContainer>
         <MenuItem onClick={handleClickCartMenu}>
           장바구니
-          <Styled.Badge>{cartItems.length}</Styled.Badge>
+          <Styled.Badge>{cartItems?.length ?? 0}</Styled.Badge>
         </MenuItem>
         <MenuItem>주문목록</MenuItem>
       </Styled.MenuContainer>
